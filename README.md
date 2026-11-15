@@ -1,22 +1,19 @@
-# PE/VC Legal Work Sample — GitHub Pages
+# Project Aurora — PE/VC Legal Portfolio v2
 
-这是一个纯静态求职作品集，不依赖框架或构建流程。
+Fictional investor-side RMB30m Series A investment legal work sample. **No real clients or confidential information.**
 
-- 在线预览：https://annaan19.github.io/pevc-legal-portfolio/
-- 仓库地址：https://github.com/annaan19/pevc-legal-portfolio
+## Files
+- `index.html`: GitHub Pages landing page (self-contained CSS)
+- `docs/01`–`07`: editable DOCX, PDF and Markdown work samples
+- `.nojekyll`: preserves direct static hosting on GitHub Pages
 
-## 文件结构
+## Key reconciliations in v2
+- RMB220m pre-money + RMB30m = RMB250m post-money; 12% post-closing ownership.
+- RMB20m first tranche and RMB10m second tranche; investor holds 8.3333% after first and 12% after second (subject to assumptions).
+- Repurchase price calculated separately for each tranche by actual funding date; RMB44.08m is illustrative only if all RMB30m were outstanding for five full years.
+- Guarantee effectiveness is distinct from guarantee provider credit quality and information covenant breaches.
+- Qiming's RMB30m *net* assets are not reduced again by RMB12m debt without reconciliation.
+- No actual mortgage is claimed: existing bank has refused further mortgage.
 
-- `index.html`：首页内容与内部链接
-- `styles.css`：页面样式及移动端适配
-- `assets/PEVC_Legal_Work_Sample_v1.pdf`：当前练习版工作样本
-
-## 发布方式
-
-仓库通过 GitHub Pages 从 `main` 分支根目录 `/(root)` 部署。推送到 `main` 后，GitHub Pages 会自动更新。
-
-## 后续替换
-
-- 用最终版 PDF 覆盖 `assets/PEVC_Legal_Work_Sample_v1.pdf`，并保持文件名和目录不变。
-- 如使用新文件名，请同步修改 `index.html` 中两处 PDF 链接。
-- 首页中的“后续制作 / 最终版完成后开放”可在相关成果完成后改成链接。
+## Deploy
+Upload the contents of this directory to the root of the existing GitHub Pages repository, retaining `.nojekyll` and `docs/*.pdf`. Configure Pages: main / root. Confirm all seven PDF links work.
