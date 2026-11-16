@@ -1,19 +1,12 @@
-# Project Aurora — PE/VC Legal Portfolio v2
+# Project Aurora — Bilingual Law-Firm-Style Work Samples
 
-Fictional investor-side RMB30m Series A investment legal work sample. **No real clients or confidential information.**
+本仓库为虚构A轮投资方律师工作底稿，非真实客户项目。/ Fictional investor-side drafting exercise; no real client mandate.
 
-## Files
-- `index.html`: GitHub Pages landing page (self-contained CSS)
-- `docs/01`–`07`: editable DOCX, PDF and Markdown work samples
-- `.nojekyll`: preserves direct static hosting on GitHub Pages
+## Documents
+七份中文/英文对照工作底稿，均提供 Markdown 与 Word：交易概览、条款清单、Red Flag DD、条款修改、法律备忘录、中英合同审阅、第二期交割核查。
 
-## Key reconciliations in v2
-- RMB220m pre-money + RMB30m = RMB250m post-money; 12% post-closing ownership.
-- RMB20m first tranche and RMB10m second tranche; investor holds 8.3333% after first and 12% after second (subject to assumptions).
-- Repurchase price calculated separately for each tranche by actual funding date; RMB44.08m is illustrative only if all RMB30m were outstanding for five full years.
-- Guarantee effectiveness is distinct from guarantee provider credit quality and information covenant breaches.
-- Qiming's RMB30m *net* assets are not reduced again by RMB12m debt without reconciliation.
-- No actual mortgage is claimed: existing bank has refused further mortgage.
-
-## Deploy
-Upload the contents of this directory to the root of the existing GitHub Pages repository, retaining `.nojekyll` and `docs/*.pdf`. Configure Pages: main / root. Confirm all seven PDF links work.
+## Version notes
+- Replaces marketing-style project presentation with restrained office-memo formatting.
+- Preserves original fictional transaction assumptions; unresolved matters remain explicitly open.
+- No third-party recruitment test text is reproduced.
+- This is not legal advice and is not an executed transaction document.
