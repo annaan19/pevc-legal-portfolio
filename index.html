@@ -1,146 +1,85 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Aurora | Investor-Side Legal Due Diligence Portfolio</title>
-  <meta name="description" content="A bilingual, fictional investor-side PRC legal due diligence portfolio showing methodology, workpapers, red flags and transaction responses." />
-  <meta property="og:title" content="Project Aurora | Legal Due Diligence Portfolio" />
-  <meta property="og:description" content="Bilingual investor-side LDD work sample — fictional simulation, annotated for portfolio review." />
-  <style>
-    :root{--navy:#17324d;--blue:#2f6b8a;--teal:#2a7f7f;--ink:#1e2933;--muted:#66737c;--line:#d8e2e8;--paper:#f7fafc;--amber:#c88720;--red:#b23a3a;--green:#2c7a5b;--white:#fff;--shadow:0 18px 45px rgba(23,50,77,.10)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.62}
-    a{color:inherit} .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-    .topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(216,226,232,.8)}
-    .nav{height:66px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:800;letter-spacing:.09em;color:var(--navy);font-size:14px}.navlinks{display:flex;gap:22px;flex-wrap:wrap}.navlinks a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:600}.navlinks a:hover{color:var(--blue)}
-    .hero{padding:76px 0 42px;background:linear-gradient(180deg,#f3f8fb 0%,#fff 92%)}
-    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid #cfe0e9;background:#fff;border-radius:999px;color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
-    h1{font-size:clamp(42px,7vw,76px);line-height:1.02;margin:20px 0 12px;color:var(--navy);letter-spacing:-.035em}.hero h2{font-size:clamp(20px,3vw,30px);font-weight:650;margin:0 0 16px;color:var(--blue)}
-    .lede{max-width:860px;color:#4d5b65;font-size:17px}.disclaimer{margin-top:24px;border-left:4px solid var(--blue);background:#eef4f7;padding:14px 16px;border-radius:0 10px 10px 0;font-size:13px;color:#40515c}
-    .facts{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:34px}.fact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 15px;box-shadow:0 6px 20px rgba(23,50,77,.04)}.fact b{display:block;color:var(--navy);font-size:16px}.fact span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
-    section{padding:54px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}.kicker{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--teal);text-transform:uppercase}.section-head h3{font-size:30px;line-height:1.15;margin:5px 0 0;color:var(--navy)}.section-head p{max-width:620px;color:var(--muted);margin:0;font-size:14px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:16px;padding:20px;background:#fff;box-shadow:0 8px 26px rgba(23,50,77,.045)}.card h4{margin:0 0 8px;color:var(--navy);font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px}.num{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.08em}
-    .riskgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.risk{border:1px solid var(--line);border-radius:14px;padding:17px 18px;background:#fff;display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start}.badge{font-size:11px;font-weight:900;letter-spacing:.06em;padding:6px 9px;border-radius:999px;text-align:center}.high{background:#fcecec;color:var(--red)}.med{background:#fff4df;color:#9b6512}.risk h4{margin:0 0 6px;font-size:15px;color:var(--navy)}.risk p{margin:0;color:#5c6871;font-size:13px}.risk small{display:block;margin-top:7px;color:#73808a}
-    .note{margin-top:18px;background:#ecf7f1;border-left:4px solid var(--green);padding:13px 15px;border-radius:0 10px 10px 0;font-size:13px;color:#3d594d}
-    .method{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{position:relative;border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--paper);min-height:150px}.step em{font-style:normal;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:800}.step h4{margin:13px 0 7px;color:var(--navy)}.step p{margin:0;color:var(--muted);font-size:13px}
-    .extract{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#fff}.mini{border-collapse:collapse;width:100%;font-size:12px}.mini th{background:var(--navy);color:#fff;text-align:left;padding:10px}.mini td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top}.mini tr:nth-child(even) td{background:#f8fbfc}
-    .callout-stack{display:grid;gap:12px}.callout{padding:15px 16px;border-radius:12px;border-left:4px solid var(--blue);background:#eef4f7}.callout strong{display:block;color:var(--navy);font-size:13px}.callout span{font-size:12.5px;color:#53616b}.callout.red{background:#fcecec;border-left-color:var(--red)}.callout.amber{background:#fff6e7;border-left-color:var(--amber)}
-    .viewer-shell{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}.viewer-toolbar{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:13px 14px;background:#f6f9fb;border-bottom:1px solid var(--line);flex-wrap:wrap}.tabs{display:flex;gap:8px;flex-wrap:wrap}.tab{border:1px solid #c9d8e0;background:#fff;color:var(--navy);padding:8px 12px;border-radius:10px;font-weight:750;font-size:12px;cursor:pointer}.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}.openlink{font-size:12px;color:var(--blue);font-weight:750;text-decoration:none}.viewer-note{padding:10px 14px;background:#fff7e8;border-bottom:1px solid #edd8ae;color:#735523;font-size:12px}.frame{width:100%;height:78vh;min-height:680px;border:0;background:#eef2f5}.fallback{display:none;padding:34px}.fallback h4{color:var(--navy)}
-    .deliverables{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.deliverable{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff}.deliverable .type{font-size:11px;color:var(--blue);font-weight:850}.deliverable h4{font-size:14px;color:var(--navy);margin:7px 0 4px}.deliverable p{font-size:12px;color:var(--muted);margin:0 0 11px}.deliverable a{font-size:12px;font-weight:800;color:var(--blue);text-decoration:none}
-    footer{padding:38px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.footgrid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.repo{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#46535d}
-    @media(max-width:900px){.facts{grid-template-columns:repeat(3,1fr)}.grid,.method{grid-template-columns:repeat(2,1fr)}.extract{grid-template-columns:1fr}.deliverables{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:620px){.navlinks{display:none}.hero{padding-top:48px}.facts{grid-template-columns:repeat(2,1fr)}.grid,.riskgrid,.method,.deliverables{grid-template-columns:1fr}.risk{grid-template-columns:80px 1fr}.frame{height:70vh;min-height:560px}.section-head{display:block}.section-head p{margin-top:12px}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>法律尽职调查模拟工作底稿</title>
+<meta name="description" content="匿名化法律尽职调查模拟工作底稿，中英文 PDF / Word 在线预览。" />
+<style>
+:root{--teal:#0d5362;--teal2:#1c7a8e;--line:#9fcbd3;--soft:#f7fafa;--text:#17353d;--muted:#6f858b;--gold:#d69a16;--goldbg:#fff7e5;--red:#b85c4b;--redbg:#fcedea;--green:#5b8b72;--greenbg:#edf6f0}
+*{box-sizing:border-box} body{margin:0;background:#fff;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Noto Sans CJK SC",Arial,sans-serif}
+a{color:inherit}.wrap{max-width:1280px;margin:0 auto;padding:22px 24px 48px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;border-bottom:1px solid var(--line);padding:8px 0 18px}.kicker{font-size:12px;font-weight:700;color:var(--teal);letter-spacing:.05em}.date{font-size:12px;color:var(--muted)}h1{font-size:28px;margin:30px 0 4px;color:var(--teal);letter-spacing:.02em}.sub{margin:0;color:var(--teal2);font-size:15px}.meta{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);margin:26px 0 16px}.meta div{padding:12px 14px;border-right:1px solid var(--line)}.meta div:last-child{border-right:0}.meta b{display:block;font-size:11px;color:var(--muted);margin-bottom:5px;font-weight:600}.meta span{font-size:14px}.notice{font-size:12px;color:var(--muted);line-height:1.7;margin:12px 2px 22px}.grid{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start}.panel{border:1px solid #d9e1e3;background:#fff}.panel h2{font-size:15px;color:var(--teal);padding:15px 16px;margin:0;border-bottom:1px solid #d9e1e3}.side{padding:12px 16px 16px}.legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tag{font-size:11px;font-weight:700;padding:5px 8px;border:1px solid}.ok{color:var(--green);background:var(--greenbg);border-color:#b9d5c6}.med{color:var(--gold);background:var(--goldbg);border-color:#e7c981}.high{color:var(--red);background:var(--redbg);border-color:#dfafa7}.scope{list-style:none;padding:0;margin:0}.scope li{font-size:12px;line-height:1.55;padding:8px 0;border-bottom:1px dashed #d9e1e3}.scope li:last-child{border-bottom:0}.scope strong{display:block;color:var(--teal);font-weight:650}.tabs{display:flex;flex-wrap:wrap;gap:8px;padding:12px 12px 0}.tab{border:1px solid var(--line);background:#fff;color:var(--teal);padding:8px 12px;font:inherit;font-size:12px;cursor:pointer}.tab.active{background:var(--teal);color:#fff;border-color:var(--teal)}.viewerbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-bottom:1px solid #d9e1e3}.viewerbar span{font-size:12px;color:var(--muted)}.viewerbar a{font-size:12px;color:var(--teal2);text-decoration:none;border-bottom:1px solid var(--line)}.viewer{width:100%;height:78vh;min-height:720px;border:0;display:block;background:#f3f6f6}.foot{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:16px;margin-top:22px;font-size:11px;color:var(--muted)}
+@media(max-width:900px){.meta{grid-template-columns:repeat(2,1fr)}.meta div{border-bottom:1px solid var(--line)}.grid{grid-template-columns:1fr}.viewer{height:70vh;min-height:560px}.side{display:grid;grid-template-columns:1fr 1fr;gap:16px}.legend{align-content:start}}
+@media(max-width:560px){.wrap{padding:16px 12px 32px}.meta{grid-template-columns:1fr}.meta div{border-right:0}.side{display:block}h1{font-size:24px}.viewer{min-height:520px}.foot{display:block}.foot span{display:block;margin-bottom:4px}}
+</style>
 </head>
 <body>
-  <header class="topbar"><div class="wrap nav"><div class="brand">PROJECT AURORA · LDD PORTFOLIO</div><nav class="navlinks"><a href="#scope">Method</a><a href="#findings">Findings</a><a href="#workpapers">Workpapers</a><a href="#report">Report Preview</a></nav></div></header>
+<div class="wrap">
+  <div class="top"><div class="kicker">LEGAL DUE DILIGENCE · SIMULATED WORKPAPER</div><div class="date">2026.11</div></div>
+  <h1>法律尽职调查模拟工作底稿</h1>
+  <p class="sub">匿名化案例 · Investor-side Legal Due Diligence</p>
 
-  <main>
-    <section class="hero"><div class="wrap">
-      <div class="eyebrow">Legal drafting portfolio · investor-side simulation</div>
-      <h1>Project Aurora</h1>
-      <h2>投资方法律尽职调查 / Investor-Side Legal Due Diligence</h2>
-      <p class="lede">一个按照真实 PE/VC 法律尽调工作流组织的双语模拟项目：从资料请求、证据链、股权与历史沿革、债务、劳动社保、税务与政府补贴，到 Red Flag、交割条件和交易保护。</p>
-      <div class="disclaimer"><b>项目性质 / Status.</b> 本项目完全虚构，独立用于法律尽调方法和法律写作作品集展示；不涉及真实客户、真实公司或已完成的法律意见。<br><b>Fictional simulation.</b> All entities, facts, documents and findings are simulated for portfolio purposes only. This is not legal advice.</div>
-      <div class="facts">
-        <div class="fact"><span>Target</span><b>星澜智能</b></div><div class="fact"><span>Round</span><b>Series A</b></div><div class="fact"><span>Investment</span><b>RMB 30m</b></div><div class="fact"><span>Pre-money</span><b>RMB 220m</b></div><div class="fact"><span>Post-close</span><b>12.0%</b></div><div class="fact"><span>Cut-off</span><b>16 Nov 2026</b></div>
-      </div>
-    </div></section>
+  <div class="meta">
+    <div><b>目标公司</b><span>甲公司</span></div>
+    <div><b>拟投资人</b><span>乙基金</span></div>
+    <div><b>交易类型</b><span>股权融资（增资）</span></div>
+    <div><b>拟投资金额</b><span>人民币3,000万元</span></div>
+    <div><b>预计投后持股</b><span>12.0%</span></div>
+    <div><b>尽调基准日</b><span>2026-11-16</span></div>
+  </div>
+  <p class="notice">本文件为匿名化模拟案例。主体名称、金额、资料编号及核查结果均为虚构，仅用于展示法律尽职调查工作底稿的组织方式；不涉及真实客户、真实交易或法律意见。</p>
 
-    <section id="scope"><div class="wrap">
-      <div class="section-head"><div><div class="kicker">Methodology</div><h3>不是“看资料”，而是建立证据链</h3></div><p>方法结构来自用户提供的 LDD Guide：公司基本信息/股东与沿革、债权债务、劳动社保、税务与政府补贴。源模板的品牌、原句及内部评级体系未被复制。</p></div>
-      <div class="method">
-        <div class="step"><em>1</em><h4>Define the fact</h4><p>先明确要证明什么：谁是股东、谁控制、借款是否未结清、员工人数为什么不一致。</p></div>
-        <div class="step"><em>2</em><h4>Primary evidence</h4><p>章程、股东名册、协议、借款文件、员工与税务资料构成第一手证据。</p></div>
-        <div class="step"><em>3</em><h4>Independent check</h4><p>用公开登记、征信/担保登记及其他独立来源验证主体、权利状态和履行状态。</p></div>
-        <div class="step"><em>4</em><h4>Transaction response</h4><p>把差异转化为补材料、整改、CP、陈述保证、赔偿或交割后承诺。</p></div>
-      </div>
-      <div class="grid" style="margin-top:18px">
-        <div class="card"><div class="num">01 · CORPORATE</div><h4>基本信息、实控人与权属链</h4><p>当前登记只是起点；进一步重建历史股权形成、出资、质押和既有投资人权利。</p></div>
-        <div class="card"><div class="num">02 · DEBT</div><h4>借款、担保与资产负担</h4><p>合同 + 征信 + 还款 + 登记交叉核验，再判断本轮是否触发同意或违约机制。</p></div>
-        <div class="card"><div class="num">03 · EMPLOYMENT</div><h4>员工、合同、社保与外包</h4><p>把花名册、工资、劳动合同、社保、公积金人数勾稽到人，并解释差异。</p></div>
-      </div>
-    </div></section>
-
-    <section id="findings" style="background:#f7fafc"><div class="wrap">
-      <div class="section-head"><div><div class="kicker">Red flags</div><h3>核心问题 / Principal Findings</h3></div><p>评级用于决定交易动作，而不是单纯贴标签：HIGH 优先进入交割条件、第三方同意或权利清理；MEDIUM 进入补充核查、赔偿或整改。</p></div>
-      <div class="riskgrid">
-        <div class="risk"><div class="badge high">HIGH · RF-01</div><div><h4>创始人股权质押 / Founder equity pledge</h4><p>相当于目标公司总股本35%的创始人股权被质押，担保约 RMB40m 个人债务。</p><small>Response: release / acceptable replacement security before Closing 1.</small></div></div>
-        <div class="risk"><div class="badge high">HIGH · RF-02</div><div><h4>既有投资人特殊权利 / Legacy rights</h4><p>2022 SHA 的赎回、反稀释、优先清算及否决权与本轮安排存在冲突。</p><small>Response: terminate/restatement and consolidate into new SHA + AOA.</small></div></div>
-        <div class="risk"><div class="badge high">HIGH · RF-03</div><div><h4>银行贷款及担保 / Bank debt</h4><p>RMB20m 经营贷款以核心设备抵押，并对新增重要股东/股权变动设通知或同意机制。</p><small>Response: written bank confirmation/consent; confirm security scope.</small></div></div>
-        <div class="risk"><div class="badge med">MED · RF-04</div><div><h4>历史股权转让文件缺口 / Title gap</h4><p>2021年20%股权转让已登记，但签署版股权转让协议和完整付款凭证未提供。</p><small>Response: cure document chain or use specific title representation/indemnity.</small></div></div>
-        <div class="risk"><div class="badge med">MED · RF-05</div><div><h4>社保公积金差异 / Contribution gap</h4><p>员工186人、社保171人、公积金169人，需要逐人解释并量化补缴风险。</p><small>Response: person-level reconciliation + remediation/specific indemnity.</small></div></div>
-        <div class="risk"><div class="badge med">MED · RF-06/07</div><div><h4>补贴与税收优惠 / Subsidy & HNTE</h4><p>RMB5m补贴附持续条件；15%企业所得税优惠依赖2026年到期的HNTE资格。</p><small>Response: clawback covenant + 25% CIT sensitivity if renewal fails.</small></div></div>
-      </div>
-      <div class="note"><b>Portfolio annotation.</b> 重点不是写出“有风险”，而是能说明证据来自哪里、还缺什么、为什么影响投资人，以及应该放进 CP、陈述保证、赔偿还是 post-closing covenant。</div>
-    </div></section>
-
-    <section id="workpapers"><div class="wrap">
-      <div class="section-head"><div><div class="kicker">Workpapers</div><h3>资料请求 + 核查矩阵</h3></div><p>真实尽调的可复核性来自工作底稿。审阅者应能从报告结论反向追到具体底层文件、外部查询和跟进项。</p></div>
-      <div class="extract">
-        <div class="tablewrap"><table class="mini"><thead><tr><th>ID</th><th>Request / 资料</th><th>Status</th><th>Follow-up / 跟进</th></tr></thead><tbody>
-          <tr><td>C-01</td><td>营业执照、最新章程</td><td>Received</td><td>—</td></tr>
-          <tr><td>C-04</td><td>2021股权转让协议及付款凭证</td><td>Open</td><td>Executed agreement missing</td></tr>
-          <tr><td>C-06</td><td>股权质押合同、主债务及登记</td><td>Partial</td><td>Current debt balance confirmation</td></tr>
-          <tr><td>D-01</td><td>企业信用报告、借款及担保文件</td><td>Received</td><td>Bank consent outstanding</td></tr>
-          <tr><td>E-02</td><td>社保/公积金明细</td><td>Received</td><td>Headcount differences identified</td></tr>
-          <tr><td>T-02</td><td>政府补贴批复/协议及拨付凭证</td><td>Received</td><td>Continuing conditions require protection</td></tr>
-        </tbody></table></div>
-        <div class="callout-stack">
-          <div class="callout"><strong>股东是谁 ≠ 实控人是谁</strong><span>直接/间接持股、表决权委托、一致行动、董事席位和章程机制应一起判断。</span></div>
-          <div class="callout red"><strong>有贷款 ≠ 一定是红旗</strong><span>真正重要的是未结清金额、资产负担、契约限制，以及本轮是否触发同意或提前到期。</span></div>
-          <div class="callout amber"><strong>社保人数不一致只是起点</strong><span>需要逐人区分新入职、离职、异地缴纳、返聘还是实际漏缴，并量化敞口。</span></div>
-          <div class="callout"><strong>补贴是“带条件的钱”</strong><span>核查持续期限、搬迁/股权变更/资产处置要求，并把返还风险写进交易保护。</span></div>
+  <div class="grid">
+    <aside class="panel">
+      <h2>事项索引</h2>
+      <div class="side">
+        <div>
+          <div class="legend"><span class="tag ok">已核验</span><span class="tag med">需补充</span><span class="tag high">重点关注</span></div>
+          <ul class="scope">
+            <li><strong>一、基本信息及历史沿革</strong>主体资格、实际控制人、股东、历史变更、公司治理、股权质押</li>
+            <li><strong>四、债权债务</strong>金融借款、第三方同意、资产抵押及其他负担</li>
+            <li><strong>十、劳动及社保公积金</strong>员工勾稽、社保公积金、外包用工</li>
+            <li><strong>十一、税务及政府补贴</strong>主要税率、高新技术企业资格、补贴持续条件、税务处罚</li>
+            <li><strong>十二、重点问题及交易处理</strong>交割条件、专项陈述保证/赔偿、交割后承诺</li>
+          </ul>
         </div>
       </div>
-    </div></section>
+    </aside>
 
-    <section id="report" style="background:#f7fafc"><div class="wrap">
-      <div class="section-head"><div><div class="kicker">Full report</div><h3>PDF / Word 网页内预览</h3></div><p>PDF 使用浏览器原生预览；Word 使用 Microsoft Office Online Viewer 嵌入。部署到你的 GitHub Pages 地址后即可直接阅读，不需要先下载。</p></div>
-      <div class="viewer-shell">
-        <div class="viewer-toolbar"><div class="tabs">
-          <button class="tab active" data-type="pdf" data-lang="cn">中文 PDF</button>
-          <button class="tab" data-type="docx" data-lang="cn">中文 Word</button>
-          <button class="tab" data-type="pdf" data-lang="en">English PDF</button>
-          <button class="tab" data-type="docx" data-lang="en">English Word</button>
-        </div><a class="openlink" id="openDoc" href="docs/Project_Aurora_LDD_CN.pdf" target="_blank" rel="noopener">Open in new tab ↗</a></div>
-        <div class="viewer-note" id="viewerNote">PDF preview is rendered from the same annotated Word report. The project is fictional and for portfolio purposes only.</div>
-        <iframe class="frame" id="docFrame" title="Project Aurora document preview" src="docs/Project_Aurora_LDD_CN.pdf"></iframe>
-        <div class="fallback" id="fallback"><h4>Word viewer fallback</h4><p>If the embedded Office viewer is blocked by browser privacy settings, use “Open in new tab” above. The document remains viewable online through Office Online once this site is deployed at the public GitHub Pages URL.</p></div>
+    <section class="panel">
+      <div class="tabs" role="tablist" aria-label="Document preview">
+        <button class="tab active" data-kind="pdf" data-file="docs/LDD_Workpaper_CN.pdf" data-label="中文 PDF">中文 PDF</button>
+        <button class="tab" data-kind="word" data-file="docs/LDD_Workpaper_CN.docx" data-label="中文 Word">中文 Word</button>
+        <button class="tab" data-kind="pdf" data-file="docs/LDD_Workpaper_EN.pdf" data-label="English PDF">English PDF</button>
+        <button class="tab" data-kind="word" data-file="docs/LDD_Workpaper_EN.docx" data-label="English Word">English Word</button>
       </div>
-      <div class="deliverables" style="margin-top:18px">
-        <div class="deliverable"><div class="type">CN · PDF</div><h4>中文尽调报告</h4><p>12页，带重点批注、红旗、工作底稿和交易处理。</p><a href="docs/Project_Aurora_LDD_CN.pdf" target="_blank">Preview PDF ↗</a></div>
-        <div class="deliverable"><div class="type">CN · WORD</div><h4>中文可编辑版</h4><p>与PDF同源，可在Office Online中直接预览。</p><a href="docs/Project_Aurora_LDD_CN.docx" target="_blank">Open file ↗</a></div>
-        <div class="deliverable"><div class="type">EN · PDF</div><h4>English LDD Report</h4><p>13 pages, investor-side red-flag and detailed diligence format.</p><a href="docs/Project_Aurora_LDD_EN.pdf" target="_blank">Preview PDF ↗</a></div>
-        <div class="deliverable"><div class="type">EN · WORD</div><h4>Editable English Version</h4><p>Same annotated content, formatted as a professional legal work sample.</p><a href="docs/Project_Aurora_LDD_EN.docx" target="_blank">Open file ↗</a></div>
-      </div>
-    </div></section>
-  </main>
+      <div class="viewerbar"><span id="label">中文 PDF</span><a id="open" href="docs/LDD_Workpaper_CN.pdf" target="_blank" rel="noopener">独立预览</a></div>
+      <iframe id="viewer" class="viewer" title="Document preview" src="docs/LDD_Workpaper_CN.pdf#view=FitH"></iframe>
+    </section>
+  </div>
 
-  <footer><div class="wrap footgrid"><div><b>PROJECT AURORA</b> · FICTIONAL LEGAL WORK SAMPLE · 16 NOV 2026</div><div class="repo">annaan19.github.io/pevc-legal-portfolio/</div></div></footer>
-
+  <div class="foot"><span>匿名化模拟案例｜仅用于作品展示</span><span>非法律意见｜不涉及真实客户</span></div>
+</div>
 <script>
-  const PUBLIC_ROOT='https://annaan19.github.io/pevc-legal-portfolio/';
-  const files={
-    cn:{pdf:'docs/Project_Aurora_LDD_CN.pdf',docx:'docs/Project_Aurora_LDD_CN.docx'},
-    en:{pdf:'docs/Project_Aurora_LDD_EN.pdf',docx:'docs/Project_Aurora_LDD_EN.docx'}
-  };
-  const frame=document.getElementById('docFrame');
-  const openDoc=document.getElementById('openDoc');
-  const note=document.getElementById('viewerNote');
-  document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{
-    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); btn.classList.add('active');
-    const lang=btn.dataset.lang,type=btn.dataset.type,file=files[lang][type];
-    if(type==='pdf'){
-      frame.src=file; openDoc.href=file;
-      note.textContent='PDF preview uses the browser’s native viewer. The PDF is generated from the same annotated Word report.';
-    } else {
-      const publicUrl=PUBLIC_ROOT+file;
-      const office='https://view.officeapps.live.com/op/embed.aspx?src='+encodeURIComponent(publicUrl);
-      frame.src=office; openDoc.href='https://view.officeapps.live.com/op/view.aspx?src='+encodeURIComponent(publicUrl);
-      note.textContent='Word preview is embedded through Microsoft Office Online Viewer and requires the public GitHub Pages URL to be reachable.';
-    }
-  }));
+const viewer=document.getElementById('viewer');
+const label=document.getElementById('label');
+const open=document.getElementById('open');
+function absoluteDoc(path){return new URL(path, window.location.href).href;}
+function show(btn){
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===btn));
+  const file=btn.dataset.file, kind=btn.dataset.kind;
+  label.textContent=btn.dataset.label;
+  if(kind==='word'){
+    const abs=absoluteDoc(file);
+    const office='https://view.officeapps.live.com/op/embed.aspx?src='+encodeURIComponent(abs);
+    viewer.src=office;
+    open.href='https://view.officeapps.live.com/op/view.aspx?src='+encodeURIComponent(abs);
+  }else{
+    viewer.src=file+'#view=FitH';
+    open.href=file;
+  }
+}
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>show(btn)));
 </script>
 </body>
 </html>
